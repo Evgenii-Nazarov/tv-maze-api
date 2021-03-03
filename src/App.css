@@ -1,38 +1,69 @@
-.App {
-  text-align: center;
+body {
+    background: #f1f2f6;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+    background: #23375a;
+    min-height: 40px;
+    padding: 10px 25px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.white-text{
+    color: #ebf3fc;
+    font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.search-input {
+    background: #f1f2f6;
+    border: 0;
+    border-radius: 6px;
+    margin-right: 8px;
+    padding: 13px 10px 13px 40px;
+    min-width: 400px;
+    margin-bottom: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.input-icons {
+    position: absolute;
+    font-size: 30px;
+    padding: 15px 0 0 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-btn {
+    background: #1e2e45;
+    color: #fff;
+    padding: 15px 15px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 12px;
+    border: 0;
+}
+
+.dashboard {
+    background: #fff;
+    width: 95%;
+    padding: 5px 0;
+}
+
+.card-item-background{
+    background: #f1f2f6;
+    position: relative;
+}
+
+.item-description {
+    background: #f1f2f6;
+
+}
+
+.card-item {
+    width: 90%;
+    padding: 100px 0 100px;
+}
+
+.card-item-image{
+    position: absolute;
+    min-height: 200px;
+    max-width: 80%;
+    top: -15px;
+    border-radius: 8px;
 }
