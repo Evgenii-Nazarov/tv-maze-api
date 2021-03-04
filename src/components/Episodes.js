@@ -33,6 +33,7 @@ const Episodes = (props) => {
         props.searchMovieById(movieId)
 
         return props.clearState()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     return (
