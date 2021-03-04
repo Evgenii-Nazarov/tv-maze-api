@@ -14,12 +14,6 @@ const movies = (state = initialState, action) => {
     case "RESET_STATE":
       return initialState
 
-    case "RESET_STATE1":
-      return state
-
-    case "AAAAAAA":
-      return state
-
     default:
       return state;
   }

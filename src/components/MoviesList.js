@@ -1,40 +1,19 @@
-import React, {useState} from 'react';
+import React from 'react';
 import MoviesItem from "./MoviesItem";
-import {Container, Row} from "reactstrap";
+import {Row} from "reactstrap";
 import {connect} from "react-redux";
 import {get} from 'lodash';
-import icon from "../icon.svg";
 import {searchEpisodesById, searchMovies} from "../redux/action";
-import { withRouter } from 'react-router-dom';
 
 const MoviesList = (props) => {
-    const movies = get(props, 'movies', [])
-    const [search, setSearch] = useState('');
-
-    const fetchData = () => {
-        props.searchMovies(search)
-    }
+    const movies = get(props, 'movies.movies', [])
 
     return (
-        <>
-            <div className="search-field">
-                <Row className='d-flex mt-4 justify-content-center align-items-center'>
-                    <div>
-                        <img className='input-icons' src={icon} alt="Too bad"/>
-                        <input className='search-input' type="text" value={search} onChange={(e) => setSearch(e.target.value)}/>
-                        <button className='search-btn' onClick={fetchData}>Search</button>
-                        <button onClick={props.searchEpisodesById}>MOVE!!!!!!</button>
-                    </div>
-                </Row>
-            </div>
-
-        {/*<Row className='flex-column align-items-center'>*/}
-        {/*    {movies.map(el =>*/}
-        {/*        <MoviesItem key={el.show.id} el={el}/>*/}
-        {/*    )}*/}
-        {/*</Row>*/}
-
-            </>
+        <Row className='flex-column align-items-center'>
+            {movies.map(el =>
+                <MoviesItem key={el.show.id} el={el}/>
+            )}
+        </Row>
     );
 };
 
